@@ -1,6 +1,6 @@
 import os,time
 
-def longestcommonsubstr(str1: str,str2: str,verbose=False):
+def longestcommonsubseq(str1: str,str2: str,verbose=False):
     a,b=len(str1),len(str2)
     matrix = [[0 for i in range(b+2)] for j in range(a+2)]
     for i in range(len(str1)):
@@ -53,7 +53,7 @@ def pathtrav(str1,str2,matrix):
     return s[::-1]
 
 str1,str2=input("Enter string 1:"),input("Enter String 2:")
-matrix,lcslen=longestcommonsubstr(str1,str2,True)
+matrix,lcslen=longestcommonsubseq(str1,str2,True)
 lcs=pathtrav(str1,str2,matrix)
 print(lcs,lcslen)
         
