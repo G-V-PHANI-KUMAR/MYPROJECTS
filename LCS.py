@@ -20,14 +20,20 @@ def longestcommonsubstr(str1: str,str2: str,verbose=False):
 def printmat(matrix):
         for i in matrix:
             print(list(map(str,i)))
-        time.sleep(0.5) # change to how slow you want the screen to move!
+        time.sleep(2) # change to how slow you want the screen to move!
         os.system('cls' if os.name == 'nt' else 'clear')
-            
+
+def doteffect():
+        for _ in range(3):
+           print('.',end='')
+        print()
+
 def pathtrav(str1,str2,matrix):
     row,col = len(str1)+1,len(str2)+1
     s=''
+    print("Traversing back",end='')
+    doteffect()
     while matrix[row][col]!=0:
-        print(row,col)
         if matrix[row-1][col]==matrix[row][col-1] and matrix[row][col]!=matrix[row-1][col]:
             s=s+str1[row-2]
             matrix[row][col]='*'
