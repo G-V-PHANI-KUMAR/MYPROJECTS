@@ -27,6 +27,7 @@ def doteffect():
         for _ in range(3):
            print('.',end='')
         print()
+        time.sleep(3)
 
 def pathtrav(str1,str2,matrix):
     row,col = len(str1)+1,len(str2)+1
